@@ -1,13 +1,9 @@
 package com.gob.museumapp;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
-
 import android.util.Log;
-
 import com.gob.museumapp.db.DBHelper;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -23,6 +19,7 @@ public class ExampleUnitTest {
         DBHelper helper = new DBHelper();
         helper.setSql("insert into user(phone, password, displayname) values('18515642763', 'WynnLu100', 'RicardoMLu')");
         int rs = helper.executeUpdate();
+        List res = helper.executeQuery();
         System.out.println(rs);
     }
 }
